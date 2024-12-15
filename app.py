@@ -2,14 +2,8 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image
 import numpy as np
-import gdown
 
-# URL of the file on Google Drive
-url = "https://drive.google.com/uc?id=1vKAKiN0gqBTHayDCoks-CXrgsF_oI4ky"
-output = "my_model.keras"
-
-# Download model
-gdown.download(url, output, quiet=False)
+output = "model/my_model.keras"
 
 # Load model
 model = tf.keras.models.load_model(output)
