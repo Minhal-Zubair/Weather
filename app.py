@@ -2,9 +2,17 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image
 import numpy as np
+import gdown
 
-# Load the model from the .keras file
-model = tf.keras.models.load_model(r'my_model.keras')
+# URL of the file on Google Drive
+url = "https://drive.google.com/file/d/1vKAKiN0gqBTHayDCoks-CXrgsF_oI4ky/view?usp=sharing"
+output = "my_model.keras"
+
+# Download model
+gdown.download(url, output, quiet=False)
+
+# Load model
+model = tf.keras.models.load_model(output)
 
 # Define the image size to which the uploaded image will be resized
 IMAGE_SIZE = 256
