@@ -5,7 +5,7 @@ import numpy as np
 import gdown
 
 # URL of the file on Google Drive
-url = "https://drive.google.com/file/d/1vKAKiN0gqBTHayDCoks-CXrgsF_oI4ky/view?usp=sharing"
+url = "https://drive.google.com/uc?id=1vKAKiN0gqBTHayDCoks-CXrgsF_oI4ky"
 output = "my_model.keras"
 
 # Download model
